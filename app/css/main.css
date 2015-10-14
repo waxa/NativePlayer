@@ -249,6 +249,8 @@ html body #sound-player > .container .rangeslider {
   background: #ACB8FF;
 }
 
+/* For delevelop, set the player on botton */
+
 html body #sound-player {
     position: fixed;
     bottom: 0px;
