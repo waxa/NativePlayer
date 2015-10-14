@@ -45,8 +45,7 @@
         </div>
 
     </section> -->
-
-
+<!-- 
     <section class="container-fluid" id="top">
 
         <div class="row">
@@ -112,6 +111,38 @@
     
         </div>
 
+    </section>
+ -->
+    <section id="sound-player" class="row">
+
+        <div id="songlist">
+            <div class="container">
+                <div class="container">
+                <ul><li>01</li><li>02</li><li>03</li></ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="playprogress" class="container">
+            <div>
+                <span class="bar"></span>
+            </div>
+        </div>
+
+        <div class="container">
+            <h3>Escucha las canciones de Mamma Mia!</h3>
+            <span id="playlist" class="playlist icon"></span>
+            <span id="prevsong" class="prevsong icon"></span>
+            <span id="playsong" class="playsong icon"></span>
+            <span id="pausesong" class="pausesong icon"></span>
+            <span id="nextsong" class="nextsong icon"></span>
+            <span id="stopsong" class="stopsong icon"></span>
+            <span id="songtitle"></span>
+            <span id="volume" class="volume icon"></span>
+            <input type="range" min="0" max="100" step="1" value="50">
+        </div>
+        <audio id="player" class="row"></audio> 
+    
     </section>
 
     <script src="components/jquery/dist/jquery.min.js"></script>

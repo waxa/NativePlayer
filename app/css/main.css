@@ -1,0 +1,255 @@
+html body #sound-player {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 85px;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 1000000;
+  border-top: 1px solid rgba(191, 28, 103, 0.46);
+}
+html body #sound-player:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 50%;
+  width: 150px;
+  height: 85px;
+  margin-left: 455px;
+  background: url(http://www.mammamia.es/wp-content/themes/mammamia/img/flowers_player_right.png);
+  background-size: auto 85px;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+html body #sound-player:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 50%;
+  width: 150px;
+  height: 85px;
+  margin-right: 455px;
+  background: url(http://www.mammamia.es/wp-content/themes/mammamia/img/flowers_player_left.png);
+  background-size: auto 85px;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+html body #sound-player iframe {
+  opacity: 0;
+  height: 1px;
+}
+html body #sound-player #songlist {
+  display: none;
+  position: absolute !important;
+  bottom: 100%;
+  width: 98%;
+  left: 50%;
+  margin-left: -49%;
+  z-index: 10;
+}
+html body #sound-player #songlist > div {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+html body #sound-player #songlist > div ul {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: white;
+  list-style: none;
+}
+html body #sound-player #songlist > div ul li {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 40px;
+  color: #222b63;
+  border-top: 1px solid #222b63;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+html body #sound-player #songlist > div ul li:hover {
+  color: white;
+  background: #222b63;
+}
+html body #sound-player #playprogress {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 8px;
+  margin-bottom: -8px;
+  padding-left: 45px;
+  padding-right: 45px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  z-index: 2;
+}
+html body #sound-player #playprogress > div {
+  width: 100%;
+  height: 6px;
+  margin-top: 0;
+  background: rgba(191, 28, 103, 0.46);
+  cursor: pointer;
+}
+html body #sound-player #playprogress > div > span {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 8px;
+  margin-top: -1px;
+  background: #bf1c67;
+}
+html body #sound-player > .container {
+  position: relative;
+  width: 100%;
+  height: 85px;
+  padding-left: 45px;
+  padding-right: 45px;
+  z-index: 1;
+  overflow: hidden;
+}
+html body #sound-player > .container > * {
+  display: inline-block;
+  vertical-align: top;
+}
+html body #sound-player > .container > h3 {
+  display: block;
+  position: relative;
+  top: 22px;
+  left: 0;
+  font-size: 16px;
+  margin: auto;
+  text-align: left;
+  color: #bf1c67;
+}
+html body #sound-player > .container .icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  margin: 30px 2px;
+  background-size: 30px 30px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+html body #sound-player > .container .icon:hover {
+  background-size: 32px 32px;
+  background-position: center center;
+}
+html body #sound-player > .container .icon.playlist {
+  margin-left: 0;
+  margin-right: 80px;
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/playlist-icon.png);
+}
+html body #sound-player > .container .icon.playlist.active,
+html body #sound-player > .container .icon.playlist:hover {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/playlist-icon-active.png);
+}
+html body #sound-player > .container .icon.prevsong {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/prevsong-icon.png);
+}
+html body #sound-player > .container .icon.prevsong.active,
+html body #sound-player > .container .icon.prevsong:hover {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/prevsong-icon-active.png);
+}
+html body #sound-player > .container .icon.playsong {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/playsong-icon.png);
+}
+html body #sound-player > .container .icon.playsong.active,
+html body #sound-player > .container .icon.playsong:hover {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/playsong-icon-active.png);
+}
+html body #sound-player > .container .icon.pausesong {
+  display: none;
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/pausesong-icon.png);
+}
+html body #sound-player > .container .icon.pausesong.active,
+html body #sound-player > .container .icon.pausesong:hover {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/pausesong-icon-active.png);
+}
+html body #sound-player > .container .icon.pausesong {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/pausesong-icon.png);
+}
+html body #sound-player > .container .icon.pausesong.active,
+html body #sound-player > .container .icon.pausesong:hover {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/pausesong-icon-active.png);
+}
+html body #sound-player > .container .icon.nextsong {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/nextsong-icon.png);
+}
+html body #sound-player > .container .icon.nextsong.active,
+html body #sound-player > .container .icon.nextsong:hover {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/nextsong-icon-active.png);
+}
+html body #sound-player > .container .icon.stopsong {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/stopsong-icon.png);
+}
+html body #sound-player > .container .icon.stopsong.active,
+html body #sound-player > .container .icon.stopsong:hover {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/stopsong-icon-active.png);
+}
+html body #sound-player > .container .icon.volume {
+  position: absolute;
+  top: 18px;
+  right: 165px;
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/volume-icon.png);
+}
+html body #sound-player > .container .icon.volume.active,
+html body #sound-player > .container .icon.volume:hover {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/volume-icon-active.png);
+}
+html body #sound-player > .container .icon.volume.mute {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/mute-icon.png) !important;
+}
+html body #sound-player > .container .icon.volume.mute.active,
+html body #sound-player > .container .icon.volume.mute:hover {
+  background-image: url(http://www.mammamia.es/wp-content/themes/mammamia/img/mute-icon-active.png) !important;
+}
+html body #sound-player > .container #songtitle {
+  width: 440px;
+  height: 85px;
+  margin-left: 0;
+  line-height: 95px;
+  white-space: nowrap;
+  color: #222b63;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+html body #sound-player > .container input {
+  display: none;
+}
+html body #sound-player > .container .rangeslider {
+  position: absolute;
+  top: 22px;
+  right: 45px;
+  width: 120px;
+  height: 5px;
+  margin-top: 40px;
+  background: #ACB8FF;
+}
+
+html body #sound-player {
+    position: fixed;
+    bottom: 0px;
+}
