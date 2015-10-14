@@ -111,6 +111,11 @@ function NativePlayer ( playList ) {
 		np.player.volume = newVol;
 	};
 
+	this.onVolumeRangeChange = function () {
+		var vol = jQuery(np.volumeRange).val() / 100;
+		np.onVolumeChange(vol);
+	};
+
 	this.onMuteClick = function () {
 		if (np.volume.classList.contains('mute')){
 			np.volume.classList.remove('mute');
@@ -146,6 +151,9 @@ function NativePlayer ( playList ) {
 
 	this.volume = document.getElementById('volume');
 	this.volume.addEventListener('click', this.onMuteClick, false);
+
+	this.volumeRange = jQuery('#sound-player input');
+	jQuery(this.volumeRange).on('change mousemove', this.onVolumeRangeChange);
 
 	jQuery('#playprogress > div').on('click', this.onProgressClick);
 
