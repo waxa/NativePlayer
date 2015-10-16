@@ -165,4 +165,11 @@ function NativePlayer ( playList ) {
 	this.setUpSongList();
 
 	this.loadNewSong();
+
+	console.log(jQuery(this.player));
+
+	setTimeout(function () {
+		if (!np.player.paused && np.player.currentTime < 0.100)
+			np.onPauseClick();
+	}, 1000);
 };
